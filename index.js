@@ -1,8 +1,8 @@
 const express = require('express');
 const authRoutes = require('./routes/authRoutes');
 const keys = require('./config/keys');
-require('./services/passport');
 require('./models/User');
+require('./services/passport');
 
 const app = express(keys.mongoURI);
 authRoutes(app);
