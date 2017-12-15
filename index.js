@@ -14,6 +14,11 @@ authRoutes(app);
 app.use(express.urlencoded());
 app.use(express.json());
 
+
+app.get('/', function (req, res) {
+    res.send('start page');
+});
+
 app.post('/posts', function (req, res) {
     count++;
     posts.push(req.body);
